@@ -28,7 +28,7 @@ The key of a commented line is represented with the `Key` object. It has a `comm
 It can be accesed via `Key("KeyName")` or `"keyName"`:
 
 ```python
-config_dict[Key("KeyName")] = "Value"
+config_dict[Key("KeyName", comment="this is the comment")] = "Value"
 
 print(config_dict["KeyName"]) # prints "Value"
 print(config_dict[Key("KeyName")]) # also prints "Value"
