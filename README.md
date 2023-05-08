@@ -2,6 +2,8 @@
 
 This is a Python Module to read and write CompleteConfig files. This format is from a Kotlin/FabricMC project called [CompleteConfig](https://github.com/Lortseam/completeconfig).
 
+See [main.py](./main.py) for an example.
+
 ## Usage
 
 The module has a feel like the JSON module.
