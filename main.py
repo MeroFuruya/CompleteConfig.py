@@ -13,6 +13,13 @@ config_dict = {
         Key("dict_comment_key", "dict_comment_key_comment"): "dict_comment_value",
         Key(StrKey("dict_comment_str_key"), "dict_comment_str_key_comment"): "dict_comment_str_value",
         Key("dict_nocomment_key"): "dict_nocomment_value",
+        "nested_dict_key": {
+            "nested_dict_std_key": "nested_dict_std_value",
+            StrKey("nested_dict_str_key"): "nested_dict_str_value",
+            Key("nested_dict_comment_key", "nested_dict_comment_key_comment"): "nested_dict_comment_value",
+            Key(StrKey("nested_dict_comment_str_key"), "nested_dict_comment_str_key_comment"): "nested_dict_comment_str_value",
+            Key("nested_dict_nocomment_key"): "nested_dict_nocomment_value",
+        },
     },
     "list_key": [
         "list_std_value1",
@@ -44,8 +51,6 @@ config_dict = {
 # and store it to a file
 with open("test.conf", "w") as f:
     dump(f, config_dict)
-
-
 
 # open an existing config
 with open("test.conf", "r") as f:
