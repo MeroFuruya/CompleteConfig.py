@@ -23,11 +23,25 @@ with open("file.config", "w") as f:
 
 The key of a commented line is represented with the `Key` object. It has a `comment` attribute that contains the comment.
 
-It can accesed via `Key("KeyName")` or `"keyName"`.
+It can be accesed via `Key("KeyName")` or `"keyName"`:
+
+```python
+config_dict[Key("KeyName")] = "Value"
+
+print(config_dict["KeyName"]) # prints "Value"
+print(config_dict[Key("KeyName")]) # also prints "Value"
+```
 
 ## String-Keys
 
 The key of a string-keyed map is represented with the `StrKey` object. It has a `value` attribute that contains the key.
 the key can also be accesed by converting the `StrKey` object to a string.
 
-It can accesed via `StrKey("KeyName")` or `"keyName"`.
+It can be accesed via `StrKey("KeyName")` or `"keyName"`.
+
+```python
+config_dict[StrKey("KeyName")] = "Value"
+
+print(config_dict["KeyName"]) # prints "Value"
+print(config_dict[StrKey("KeyName")]) # also prints "Value"
+```
